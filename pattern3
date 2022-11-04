@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main(){
+ int n;
+cin >> n;
+char start='A';
+int i=0;
+while(i<n){
+    int j=0;
+    while(j<=i){
+     char c=start + j;
+        cout << c;
+        j++;
+    }
+	start++;
+    cout << endl;
+     i++;
+}
+}
+
+OUTPUT-
+ A
+ BC
+ CDE
+ DEFG

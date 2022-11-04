@@ -1,0 +1,41 @@
+/* 
+	Time complexity: O(N ^ 2)  
+	Space complexity: O(N ^ 2) 
+
+	Where N is the size of the pattern 
+*/
+
+public class Solution {
+	public static String[] printPatt(int N) {
+
+		// Create an array of string for storing the pattern
+		String result[] = new String[N];
+
+		// Result index marker
+		int index = 0;
+
+		// Create a string that will contain 'N' '*' characters
+		String str = "";
+
+		for (int i = 0; i < N; i++) {
+
+			// Append '*' in string in each iteration of loop
+			str += ('*');
+		}
+
+		// Run a loop from 'i'=1 to 'i'='N'
+		for (int i = 1; i <= N; i++) {
+
+			// Append current string to answer
+			result[index++] = str;
+
+			// Decrese length of string by 1
+			str = str.substring(0, str.length() - 1);
+		}
+
+		// Return the array of string that contains pattern
+		return result;
+	}
+
+}
+

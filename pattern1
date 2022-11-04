@@ -1,0 +1,30 @@
+ #include<iostream>
+using namespace std;
+int main() {  
+   int n;
+   cin >> n;
+    char start='A'+n-1;
+   char c;
+   int i=0;
+   while(i<n){
+       int j=0;
+       while(j<=i){
+           c=start + j;
+           cout << c;
+           j++;
+       }
+       start--;
+       cout << endl;
+       i++;
+   }
+}
+
+
+
+/*output-
+   For N=5
+   E
+   DE
+   CDE
+   BCDE
+   ABCDE*/
